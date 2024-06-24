@@ -6,16 +6,17 @@ Feel free to use this as a getting-started guide for a quick setup for Axum.  I 
 
 ### The starting point is the aptly named [basic-start](https://github.com/Muddanak/axum-bits/tree/master/basic-start)
 
-### Then you can look at either [basic-responders](https://github.com/Muddanak/axum-bits/tree/master/basic-responders) or [basic-extractors](https://github.com/Muddanak/axum-bits/tree/master/basic-extractors)
+Then you can look at either [basic-responders](https://github.com/Muddanak/axum-bits/tree/master/basic-responders) or [basic-extractors](https://github.com/Muddanak/axum-bits/tree/master/basic-extractors)
 
 ## [dependencies]
 
-### [axum](https://crates.io/crates/axum) = "0.7.5"
+[axum](https://crates.io/crates/axum) = "0.7.5"
 
-### [serde](https://crates.io/crates/serde) = { version = "1.0.203" }
+[serde](https://crates.io/crates/serde) = "1.0.203"
 
-### [serde_json](https://crates.io/crates/serde_json) = "1.0.117"
+[serde_json](https://crates.io/crates/serde_json) = "1.0.117"
 
-### [tokio](https://crates.io/crates/tokio) = { version = "1.38.0" }
+[tokio](https://crates.io/crates/tokio) = "1.38.0"
 
+---
 MIT License
