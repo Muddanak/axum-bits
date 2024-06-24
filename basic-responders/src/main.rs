@@ -9,9 +9,13 @@ use serde_json::{json, Value};
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let webserver = Router::new()
-        .route("/", get(index))
+
+        .route("/", get(index)
+                    .post(post_index))
+
         .route("/html", get(html_index))
         .route("/json", get(json_index))
+
         .fallback(error_404);
 
     let weblistener = tokio::net::TcpListener::bind("127.0.0.1:8080").await?;
@@ -21,12 +25,17 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-/// Default reply (Route: "/"), returns a str
+/// Default reply (Route: "/") via GET, returns a str
 async fn index() -> &'static str {
     "All good"
 }
 
-/// HTML reply (Route: "/html"), returns an HTML string
+/// Default reply (Route: "/") via POST
+async fn post_index() -> &'static str {
+    "All good (post)"
+}
+
+/// HTML reply (Route: "/html") via GET, returns an HTML string
 /// The HTML is then rendered by the browser
 async fn html_index() -> Html<&'static str> {
     Html(
@@ -36,7 +45,7 @@ async fn html_index() -> Html<&'static str> {
     )
 }
 
-/// JSON reply (Route: "/json"), returns a JSON object, type serde_json::Value
+/// JSON reply (Route: "/json") via GET, returns a JSON object, type serde_json::Value
 /// The JSON is handled by a web browser to show what data was returned
 /// Other utilities may handle it however JSON is handled
 async fn json_index() -> Json<Value> {
