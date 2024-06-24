@@ -12,7 +12,7 @@ Feel free to use this as a getting-started guide for a quick setup for Axum.  I 
 
 ### [axum](https://crates.io/crates/axum) = "0.7.5"
 
-### [serde](https://crates.io/crates/serde) = { version = "1.0.203", features = ["derive"] }
+### [serde](https://crates.io/crates/serde) = { version = "1.0.203" }
 
 ### [serde_json](https://crates.io/crates/serde_json) = "1.0.117"
 
