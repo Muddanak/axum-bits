@@ -9,12 +9,10 @@ use super::extract_struct::Student;
 ///     grade: usize
 /// Example: 127.0.0.1:8080/studentpath/Bob McBobson/85
 pub(crate) async fn get_student_info_path(Path(studentinfo): Path<Student>) -> Html<String> {
-    let studentstring = format!(
-        "<h1><center>
-        Name: {} | Grade: {}
-        </center></h1>",
-        studentinfo.name, studentinfo.grade
-    );
-
-    Html(studentstring)
+    Html(format!(
+            "<h1><center>
+            Name: {} | Grade: {}
+            </center></h1>",
+            studentinfo.name, studentinfo.grade
+        ))
 }

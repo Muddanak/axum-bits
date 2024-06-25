@@ -8,12 +8,10 @@ use super::extract_struct::Student;
 ///     grade: usize
 /// Example: 127.0.0.1:8080/studentquery?name=Bob McBobson&grade=85
 pub(crate) async fn get_student_info_query(Query(studentinfo): Query<Student>) -> Html<String> {
-    let studentstring = format!(
+    Html(format!(
         "<h1><center>
         Name: {} | Grade: {}
         </center></h1>",
         studentinfo.name, studentinfo.grade
-    );
-
-    Html(studentstring)
+    ))
 }
