@@ -14,7 +14,7 @@ Then you can look at either [basic-responders](https://github.com/Muddanak/axum-
 
 [serde](https://crates.io/crates/serde) = "1.0.203"
 
-[serde_json](https://crates.io/crates/serde_json) = "1.0.117"
+[serde_json](https://crates.io/crates/serde_json) = "1.0.118"
 
 [tokio](https://crates.io/crates/tokio) = "1.38.0"
 
