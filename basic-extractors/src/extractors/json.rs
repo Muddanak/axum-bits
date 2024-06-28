@@ -12,7 +12,7 @@ use super::extract_struct::Student;
 ///     {"name":"Bob McBobson", "grade":85}
 /// OUTPUT:
 ///     {"grade":75, "name":"Bob McBobson"}
-pub(crate) async fn get_student_info_json(Json(studentinfo): Json<Student>) -> Json<Value> {
+pub(crate) async fn post_student_info_json(Json(studentinfo): Json<Student>) -> Json<Value> {
     Json(json!({ "name": studentinfo.name, 
                 "grade": studentinfo.grade - 10}))
 }

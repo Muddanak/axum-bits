@@ -8,9 +8,6 @@ use super::extract_struct::Student;
 ///     grade: usize
 /// Example: 127.0.0.1:8080/studentform
 ///     POST data: "name=Bob McBobson&grade=85"
-pub(crate) async fn get_student_info_form(Form(studentinfo): Form<Student>) -> String {
-    format!(
-        "Name: {} | Grade: {}",
-        studentinfo.name, studentinfo.grade
-    )
+pub(crate) async fn post_student_info_form(Form(studentinfo): Form<Student>) -> String {
+    format!("Name: {} | Grade: {}", studentinfo.name, studentinfo.grade)
 }
