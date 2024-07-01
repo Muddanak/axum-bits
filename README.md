@@ -4,9 +4,11 @@
 
 Feel free to use this as a getting-started guide for a quick setup for Axum.  I wouldn't exactly call this an Axum tutorial, just more a demo of using it.  I'll add more in time.
 
-### The starting point is the aptly named [basic-start](https://github.com/Muddanak/axum-bits/tree/master/basic-start)
+### The starting point is the aptly named [start](https://github.com/Muddanak/axum-bits/tree/master/start)
 
-Then you can look at either [basic-responders](https://github.com/Muddanak/axum-bits/tree/master/basic-responders) or [basic-extractors](https://github.com/Muddanak/axum-bits/tree/master/basic-extractors)
+Then you can look at either [responders](https://github.com/Muddanak/axum-bits/tree/master/responders) or [extractors](https://github.com/Muddanak/axum-bits/tree/master/extractors)
+
+### Added in some medium-level additions
 
 ## [dependencies]
 
