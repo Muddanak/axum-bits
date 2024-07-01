@@ -1,5 +1,5 @@
 [package]
-name = "medium-state-modification"
+name = "state-modification"
 version = "0.1.0"
 edition = "2021"
 

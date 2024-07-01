@@ -118,43 +118,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "basic-extractors"
-version = "0.1.0"
-dependencies = [
- "axum",
- "serde",
- "serde_json",
- "tokio",
-]
-
-[[package]]
-name = "basic-responders"
-version = "0.1.0"
-dependencies = [
- "axum",
- "serde_json",
- "tokio",
-]
-
-[[package]]
-name = "basic-start"
-version = "0.1.0"
-dependencies = [
- "axum",
- "serde_json",
- "tokio",
-]
-
-[[package]]
-name = "basic-state"
-version = "0.1.0"
-dependencies = [
- "axum",
- "serde",
- "tokio",
-]
-
-[[package]]
 name = "bitflags"
 version = "2.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -177,6 +140,16 @@ name = "cfg-if"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
+
+[[package]]
+name = "extractors"
+version = "0.1.0"
+dependencies = [
+ "axum",
+ "serde",
+ "serde_json",
+ "tokio",
+]
 
 [[package]]
 name = "fnv"
@@ -359,15 +332,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0e7465ac9959cc2b1404e8e2367b43684a6d13790fe23056cc8c6c5a6b7bcb94"
 
 [[package]]
-name = "medium-state-modification"
-version = "0.1.0"
-dependencies = [
- "axum",
- "serde",
- "tokio",
-]
-
-[[package]]
 name = "memchr"
 version = "2.7.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -513,6 +477,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "responders"
+version = "0.1.0"
+dependencies = [
+ "axum",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
 name = "rustc-demangle"
 version = "0.1.24"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -558,9 +531,9 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.119"
+version = "1.0.120"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e8eddb61f0697cc3989c5d64b452f5488e2b8a60fd7d5076a3045076ffef8cb0"
+checksum = "4e0d21c9a8cae1235ad58a00c11cb40d4b1e5c784f1ef2c537876ed6ffd8b7c5"
 dependencies = [
  "itoa",
  "ryu",
@@ -612,6 +585,33 @@ checksum = "ce305eb0b4296696835b71df73eb912e0f1ffd2556a501fcede6e0c50349191c"
 dependencies = [
  "libc",
  "windows-sys 0.52.0",
+]
+
+[[package]]
+name = "start"
+version = "0.1.0"
+dependencies = [
+ "axum",
+ "serde_json",
+ "tokio",
+]
+
+[[package]]
+name = "state"
+version = "0.1.0"
+dependencies = [
+ "axum",
+ "serde",
+ "tokio",
+]
+
+[[package]]
+name = "state-modification"
+version = "0.1.0"
+dependencies = [
+ "axum",
+ "serde",
+ "tokio",
 ]
 
 [[package]]
