@@ -12,13 +12,13 @@ Then you can look at either [responders](https://github.com/Muddanak/axum-bits/t
 
 ## [dependencies]
 
-[axum](https://crates.io/crates/axum) = "0.7.5"
+[axum](https://crates.io/crates/axum) 
 
-[serde](https://crates.io/crates/serde) = "1.0.203"
+[serde](https://crates.io/crates/serde) 
 
-[serde_json](https://crates.io/crates/serde_json) = "1.0.118"
+[serde_json](https://crates.io/crates/serde_json) 
 
-[tokio](https://crates.io/crates/tokio) = "1.38.0"
+[tokio](https://crates.io/crates/tokio) 
 
 ---
 MIT License
