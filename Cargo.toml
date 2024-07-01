@@ -2,8 +2,10 @@
 
 resolver = "2"
 members = [ 
-	"basic-extractors",
-	"basic-responders",
+	"basics/extractors",
+	"basics/responders",	
+	"basics/start", 
+	"basics/state", 
 	
-	"basic-start",
+	"medium/state-modification",
 ]
