@@ -10,6 +10,22 @@ Then you can look at either [responders](https://github.com/Muddanak/axum-bits/t
 
 ### Added in some medium-level additions
 
+## How to run each module
+
+`cargo run --bin start` from the main `axum-bits` directory
+
+### Current Modules
+
+
+| Module Name | Description |
+|---|---|
+start       | basic Axum server
+responders  | Demo of Axum Response
+extractors  | Demo of Axum Extractor
+state       | Demo of how to send a state of data with the server
+state-modification | Demo of how to modify the state inside of the server with Arc and Mutex
+
+
 ## [dependencies]
 
 [axum](https://crates.io/crates/axum) 
