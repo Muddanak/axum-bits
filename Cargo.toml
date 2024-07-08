@@ -1,11 +1,10 @@
 [workspace]
 
 resolver = "2"
-members = [ 
-	"basics/extractors",
-	"basics/responders",	
-	"basics/start", 
-	"basics/state", 
-	
-	"medium/state-modification",
-]
+members = ["basics/*", "medium/*"]
+
+[workspace.dependencies]
+axum = "0.7.5"
+serde = { version = "1.0.204", features = ["derive"] }
+serde_json = "1.0.120"
+tokio = { version = "1.38.0", features = ["full"] }
