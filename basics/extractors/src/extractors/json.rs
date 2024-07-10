@@ -1,7 +1,8 @@
 use axum::Json;
 use serde_json::{json, Value};
 
-use super::extract_struct::Student;
+//use super::extract_struct::Student;
+use axumbitslib::Student;
 
 /// Extract from the URL a JSON given set of data and have it deserialize into the Student struct
 /// Requires:

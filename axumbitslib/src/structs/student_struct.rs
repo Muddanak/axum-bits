@@ -1,7 +1,8 @@
 use serde::Deserialize;
 
+/// The Student Struct
 #[derive(Clone, Default, Deserialize)]
-pub(crate) struct Student {
+pub struct Student {
     pub name: String,
     pub grade: usize,
 }

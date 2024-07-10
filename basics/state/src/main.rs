@@ -1,5 +1,3 @@
-mod state;
-
 use axum::{
     extract::State,
     http::StatusCode,
@@ -7,7 +5,8 @@ use axum::{
     routing::get,
     Router,
 };
-use state::state_struct::StateInfo;
+
+use axumbitslib::StateInfo;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {

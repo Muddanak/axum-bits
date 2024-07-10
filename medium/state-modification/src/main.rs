@@ -1,5 +1,3 @@
-mod state;
-
 use axum::{
     extract::State,
     http::StatusCode,
@@ -7,11 +5,11 @@ use axum::{
     routing::get,
     Router,
 };
-use state::state_struct::StateInfo;
+use axumbitslib::ArcMutexStateInfo as arc_mutex_state_info;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let state_to_use = StateInfo::default();
+    let state_to_use = arc_mutex_state_info::default();
 
     let webserver = Router::new()
         .route("/state", get(state))
@@ -27,7 +25,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 }
 
 /// Default reply (Route: "/") via GET, returns a str
-async fn state(State(stateinfo): State<StateInfo>) -> Html<String> {
+async fn state(State(stateinfo): State<arc_mutex_state_info>) -> Html<String> {
     Html(format!(
         "<h1><center>
             Name: {}<br>
@@ -52,7 +50,7 @@ async fn state(State(stateinfo): State<StateInfo>) -> Html<String> {
     ))
 }
 
-async fn change_state(State(stateinfo): State<StateInfo>) -> Html<&'static str> {
+async fn change_state(State(stateinfo): State<arc_mutex_state_info>) -> Html<&'static str> {
     *stateinfo.secret_number.lock().expect("Couldn't lock name") += 1;
 
     Html("<h1><center>State has been altered</center></h1>")

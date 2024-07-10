@@ -1,6 +1,7 @@
 use axum::Form;
 
-use super::extract_struct::Student;
+//use super::extract_struct::Student;
+use axumbitslib::Student;
 
 /// Extract from the URL the given Form data in a POST request and have it deserialize into the Student struct
 /// Requires:
