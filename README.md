@@ -22,6 +22,7 @@ Then you can look at either [responders](https://github.com/Muddanak/axum-bits/t
 start       | basic Axum server
 responders  | Demo of Axum Response
 extractors  | Demo of Axum Extractor
+htmlfile    | Demo of serving a static HTML file with tower_http
 state       | Demo of how to send a state of data with the server
 state-modification | Demo of how to modify the state inside of the server with Arc and Mutex
 
