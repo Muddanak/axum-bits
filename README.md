@@ -20,12 +20,12 @@ Then you can look at either [responders](https://github.com/Muddanak/axum-bits/t
 
 | Module Name | Description |
 |---|---|
-start       | basic Axum server
-responders  | Demo of Axum Response
-extractors  | Demo of Axum Extractor
-htmlfile    | Demo of serving a static HTML file with tower_http
-state       | Demo of how to send a state of data with the server
-state-modification | Demo of how to modify the state inside of the server with Arc and Mutex
+[start](https://github.com/Muddanak/axum-bits/blob/master/basics/start/src/main.rs)       | basic Axum server
+[responders](https://github.com/Muddanak/axum-bits/blob/master/basics/responders/src/main.rs)  | Demo of Axum Response
+[extractors](https://github.com/Muddanak/axum-bits/blob/master/basics/extractors/src/main.rs)  | Demo of Axum Extractor
+[htmlfile](https://github.com/Muddanak/axum-bits/blob/master/basics/htmlfile/src/main.rs)    | Demo of serving a static HTML file with tower_http
+[state](https://github.com/Muddanak/axum-bits/blob/master/basics/state/src/main.rs)       | Demo of how to send a state of data with the server
+[state-modification](https://github.com/Muddanak/axum-bits/blob/master/medium/state-modification/src/main.rs) | Demo of how to modify the state inside of the server with Arc and Mutex
 
 
 ## [dependencies]
