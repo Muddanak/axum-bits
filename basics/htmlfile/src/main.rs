@@ -1,6 +1,6 @@
 /// Exhibiting a basic method to handle a simple server implementation of Axum
 /// This implementation introduces tower_http to provide the ServeFile service
-use axum::{response::Html, Router};
+use axum::Router;
 use tower_http::services::ServeFile;
 
 #[tokio::main]
@@ -9,9 +9,9 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Contains a global fallback for a 404 error if the route isn't found
     let webserver = Router::new()
         // Basic routing service that returns a stored html file
-        .route_service("/", ServeFile::new("pages/index.html"))
-        // Global 404 route and handler closure
-        .fallback(|| async move { Html("404: Not found") });
+        .route_service("/", ServeFile::new("basics/htmlfile/pages/index.html"))
+        // Global 404 route
+        .fallback_service(ServeFile::new("basics/htmlfile/pages/404.html"));
 
     // Establish a listening socket
     // Gracefully errors out if it can't do so
@@ -23,9 +23,3 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     Ok(())
 }
-
-/* /// The function called for the default index state
-async fn index_for_example() -> &'static str {
-    "All good"
-}
- */
