@@ -13,7 +13,7 @@ Then you can look at either [responders](https://github.com/Muddanak/axum-bits/t
 
 ## How to run each module
 
-`cargo run --bin start` from the main `axum-bits` directory
+`cargo run --bin <module>` from the main `axum-bits` directory
 
 ### Current Modules
 
